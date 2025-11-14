@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookiesCookbook", "CookiesCookbook\CookiesCookbook.csproj", "{2A8D3D67-2B2A-4F92-B9A2-BC3B2B781EDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A8D3D67-2B2A-4F92-B9A2-BC3B2B781EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8D3D67-2B2A-4F92-B9A2-BC3B2B781EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8D3D67-2B2A-4F92-B9A2-BC3B2B781EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8D3D67-2B2A-4F92-B9A2-BC3B2B781EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
