@@ -1,6 +1,6 @@
 namespace CookiesCookbook;
 
-public class RecipesRepository
+public class RecipesRepository : IRecipesRepository
 {
     
 }

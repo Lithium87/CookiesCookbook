@@ -2,22 +2,22 @@ namespace CookiesCookbook;
 
 public class CookiesRecipesApp
 {
-    private readonly RecipesRepository _recipesRepository;
-    private readonly RecipesUserInteraction _recipesUserInteraction;
+    private readonly IRecipesRepository _recipesRepository;
+    private readonly IRecipesUserInteraction _recipesUserInteraction;
 
-    public CookiesRecipesApp(RecipesRepository _recipesRepository, RecipesUserInteraction _recipesUserInteraction)
+    public CookiesRecipesApp(IRecipesRepository recipesRepository, IRecipesUserInteraction recipesUserInteraction)
     {
-        _recipesRepository = _recipesRepository;
-        _recipesUserInteraction = _recipesUserInteraction;
+        _recipesRepository = recipesRepository;
+        _recipesUserInteraction = recipesUserInteraction;
     }
     public void Run()
     {
         var allRecipes = _recipesRepository.Read(filePath);
-        _recipesUserInteraction.PrintExistingRecipes(allRecipes);
+        _recipesConsoleUserInteraction.PrintExistingRecipes(allRecipes);
 
-        _recipesUserInteraction.PromptToCreateRecipe();
+        _recipesConsoleUserInteraction.PromptToCreateRecipe();
 
-        var ingredients = _recipesUserInteraction.ReadIngredientsFromUser();
+        var ingredients = _recipesConsoleUserInteraction.ReadIngredientsFromUser();
 
         if (ingredients.Count() > 0)
         {
@@ -25,15 +25,15 @@ public class CookiesRecipesApp
             allRecipes.Add(recipe);
             _recipesRepository.Write(filePath, allRecipes);
 
-            _recipesUserInteraction.ShowMessage("Recipe added:");
-            _recipesUserInteraction.ShowMessage(recipe.ToString());
+            _recipesConsoleUserInteraction.ShowMessage("Recipe added:");
+            _recipesConsoleUserInteraction.ShowMessage(recipe.ToString());
         }
         else
         {
-            _recipesUserInteraction.ShowMessage("No ingredients have been selected. " + 
+            _recipesConsoleUserInteraction.ShowMessage("No ingredients have been selected. " + 
                                                 "Recipe will not be saved");
         }
 
-        _recipesUserInteraction.Exit();
+        _recipesConsoleUserInteraction.Exit();
     }
 }

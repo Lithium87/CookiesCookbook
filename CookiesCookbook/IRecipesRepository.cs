@@ -1,6 +1,6 @@
 namespace CookiesCookbook;
 
-public class RecipesUserInteraction
+public interface IRecipesRepository
 {
     
 }
