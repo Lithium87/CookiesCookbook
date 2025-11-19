@@ -6,6 +6,8 @@ namespace CookiesCookbook.Recipes.Ingredients
         public abstract string Name { get; }
         
         public virtual string PreparationInstruction => "Add to other ingredients.";
+
+        public override string ToString() => $"{Id}. {Name}";
     }
 }
 
