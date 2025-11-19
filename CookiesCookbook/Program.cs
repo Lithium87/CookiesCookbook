@@ -7,6 +7,6 @@ class Program
         var cookiesRecipesApp = new CookiesRecipesApp(
             new RecipesRepository(),
             new RecipesConsoleUserInteraction());
-        cookiesRecipesApp.Run();
+        cookiesRecipesApp.Run("recipes.txt");
     }
 }
