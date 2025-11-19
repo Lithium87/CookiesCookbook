@@ -13,7 +13,7 @@ public class CookiesRecipesApp
     public void Run()
     {
         var allRecipes = _recipesRepository.Read(filePath);
-        _recipesConsoleUserInteraction.PrintExistingRecipes(allRecipes);
+        _recipesUserInteraction.PrintExistingRecipes(allRecipes);
 
         _recipesConsoleUserInteraction.PromptToCreateRecipe();
 
