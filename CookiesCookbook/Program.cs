@@ -4,9 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
+        var ingredientsRegister = new IngredientsRegister();
         var cookiesRecipesApp = new CookiesRecipesApp(
-            new RecipesRepository(),
-            new RecipesConsoleUserInteraction(new IngredientsRegister()));
+            new RecipesRepository(new StringsTextualRepository(), ingredientsRegister),
+            new RecipesConsoleUserInteraction(ingredientsRegister));
         cookiesRecipesApp.Run("recipes.txt");
     }
 }

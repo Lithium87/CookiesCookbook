@@ -2,7 +2,7 @@ using CookiesCookbook.Recipes.Ingredients;
 
 namespace CookiesCookbook;
 
-public class IngredientsRegister
+public class IngredientsRegister : IIngredientsRegister
 {
     public IEnumerable<Ingredient> All { get; } = new List<Ingredient>
     {
