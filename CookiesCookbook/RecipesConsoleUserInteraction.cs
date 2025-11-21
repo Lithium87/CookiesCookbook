@@ -1,4 +1,5 @@
 using CookiesCookbook.Recipes;
+using CookiesCookbook.Recipes.Ingredients;
 
 namespace CookiesCookbook;
 
@@ -46,5 +47,30 @@ public class RecipesConsoleUserInteraction : IRecipesUserInteraction
         {
             Console.WriteLine(ingredient);
         }
+    }
+
+    public IEnumerable<Ingredient> ReadIngredientsFromUser()
+    {
+        bool shallStop = false;
+        var ingredients = new List<Ingredient>();
+        while (!shallStop)
+        {
+            Console.WriteLine("Add an ingredient by its ID, or type anything else if finished.");
+            var userInput = Console.ReadLine();
+            if (int.TryParse(userInput, out int id))
+            {
+                var selectedIngredient = _ingredientsRegister.GetById(id);
+                if (selectedIngredient is not null)
+                {
+                    ingredients.Add(selectedIngredient);
+                }
+            }
+            else
+            {
+                shallStop = true;
+            }
+        }
+
+        return ingredients;
     }
 }
