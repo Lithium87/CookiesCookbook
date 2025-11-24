@@ -1,7 +1,7 @@
 using CookiesCookbook.Recipes;
 using CookiesCookbook.Recipes.Ingredients;
 
-namespace CookiesCookbook;
+namespace CookiesCookbook.App;
 
 public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 {

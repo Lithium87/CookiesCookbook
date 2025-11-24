@@ -1,4 +1,4 @@
-namespace CookiesCookbook;
+namespace CookiesCookbook.DataAccess;
 
 public interface IStringsRepository
 {

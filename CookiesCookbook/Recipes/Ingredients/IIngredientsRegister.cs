@@ -1,6 +1,4 @@
-using CookiesCookbook.Recipes.Ingredients;
-
-namespace CookiesCookbook;
+namespace CookiesCookbook.Recipes.Ingredients;
 
 public interface IIngredientsRegister
 {

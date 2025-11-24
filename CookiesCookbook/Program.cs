@@ -1,4 +1,11 @@
-﻿namespace CookiesCookbook;
+﻿
+using CookiesCookbook.App;
+using CookiesCookbook.DataAccess;
+using CookiesCookbook.FileAccess;
+using CookiesCookbook.Recipes;
+using CookiesCookbook.Recipes.Ingredients;
+
+namespace CookiesCookbook;
 
 class Program
 {

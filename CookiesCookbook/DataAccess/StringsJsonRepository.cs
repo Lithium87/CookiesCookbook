@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace CookiesCookbook;
+namespace CookiesCookbook.DataAccess;
 
 public class StringsJsonRepository : StringsRepository
 {

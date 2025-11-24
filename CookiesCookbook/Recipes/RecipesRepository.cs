@@ -1,7 +1,7 @@
-using CookiesCookbook.Recipes;
 using CookiesCookbook.Recipes.Ingredients;
+using CookiesCookbook.DataAccess;
 
-namespace CookiesCookbook;
+namespace CookiesCookbook.Recipes;
 
 public class RecipesRepository : IRecipesRepository
 {

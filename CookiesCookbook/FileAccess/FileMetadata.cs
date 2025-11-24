@@ -1,4 +1,4 @@
-namespace CookiesCookbook;
+namespace CookiesCookbook.FileAccess;
 
 public class FileMetadata
 {
@@ -12,10 +12,4 @@ public class FileMetadata
     }
     
     public string ToPath() => $"{Name}.{Format.AsFileExtension()}";
-}
-
-public enum FileFormat
-{
-    Json,
-    Text
 }
